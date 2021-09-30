@@ -27,8 +27,6 @@ services:
   app:
     image: wordpress:5.3.2-php7.4-fpm
     container_name: app
-    environment:
-      - WP_DEBUG=true
     volumes:
       - ./:/var/www/html
     networks:
