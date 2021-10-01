@@ -17,6 +17,10 @@
 ```bash
 sudo usermod -aG www-data ｛※所有者｝
 sudo chgrp -R www-data ../*
+
+# Wordpress本体を更新できるように
+sudo chown www-data wp-admin/includes/file.php
+
 sudo chmod g+w -R ../*
 ```
 
