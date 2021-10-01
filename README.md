@@ -10,6 +10,16 @@
     - `Enter password:`は`root`を入力
 6. `exit`コマンド実行
 
+## プラグイン等更新できるようパーミッション解決
+
+- 権限の見直し要！いったん動くように
+
+```bash
+sudo usermod -aG www-data ｛※所有者｝
+sudo chgrp -R www-data ../*
+sudo chmod g+w -R ../*
+```
+
 ## 動作確認
 
 ### URL
