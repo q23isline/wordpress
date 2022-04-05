@@ -1,0 +1,11 @@
+{
+    "require-dev": {
+        "wp-coding-standards/wpcs": "^2.3"
+    },
+    "scripts": {
+        "check": [
+            "@cs-check"
+        ],
+        "cs-check": "phpcs --colors -p --standard=WordPress wp-content/themes/"
+    }
+}

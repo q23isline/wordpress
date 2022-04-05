@@ -22,3 +22,6 @@ node_modules/
 *.sql
 !docker/local/mysql/test-data/*.sql
 *.sqlite
+
+# composer
+/vendor/*

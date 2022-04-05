@@ -2,13 +2,21 @@
 
 ## はじめにやること
 
-1. `git clone 'https://github.com/q23isline/wordpress.git'`コマンド実行
-2. `docker-compose build`コマンド実行
-3. `docker-compose up -d`コマンド実行
-4. `docker exec -it db /bin/bash`コマンド実行
-5. `mysql -u root -p wordpress < /root/test-data/wordpress.sql`コマンド実行
-    - `Enter password:`は`root`を入力
-6. `exit`コマンド実行
+```bash
+git clone 'https://github.com/q23isline/wordpress.git'
+docker-compose build
+docker-compose up -d
+# db コンテナ内へ入る
+docker exec -it db /bin/bash
+# db コンテナ内でデータ取り込み
+mysql -u root -p wordpress < /root/test-data/wordpress.sql
+# Enter password: は root を入力
+# db コンテナから脱出
+exit
+
+docker exec -it app php composer.phar install
+docker exec -it app vendor/bin/phpcs --config-set installed_paths vendor/wp-coding-standards/wpcs
+```
 
 ## プラグイン等更新できるようパーミッション解決
 
@@ -39,6 +47,14 @@ sudo chmod g+w -R ../*
   - admin
 - パスワード
   - admin00
+
+## コード静的解析
+
+```bash
+docker exec -it --env XDEBUG_MODE=coverage app php composer.phar check
+# もしくは
+docker exec -it app vendor/bin/phpcs --colors -p --standard=WordPress wp-content/themes/
+```
 
 ## デバッグ実行
 
