@@ -1,4 +1,7 @@
 {
+    "name": "wordpress/app",
+    "description": "WordPress skeleton app",
+    "license": "MIT",
     "require-dev": {
         "wp-coding-standards/wpcs": "^2.3"
     },
