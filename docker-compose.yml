@@ -1,16 +1,6 @@
 networks:
   frontend:
-    driver: bridge
-    ipam:
-      driver: default
-      config:
-        - subnet: 192.168.0.0/24
   backend:
-    driver: bridge
-    ipam:
-      driver: default
-      config:
-        - subnet: 192.168.10.0/24
 
 volumes:
   db-data:
@@ -29,10 +19,8 @@ services:
       - ./docker/local/nginx/ssl:/etc/nginx/ssl
       - ./:/var/www/html
     networks:
-      frontend:
-        ipv4_address: 192.168.0.10
-      backend:
-        ipv4_address: 192.168.10.11
+      - frontend
+      - backend
     depends_on:
       - db
   app:
@@ -43,8 +31,12 @@ services:
       - ./docker/local/wordpress/php.ini:/usr/local/etc/php/php.ini
     networks:
       - backend
+    # WordPress のサイトヘルスで REST API や Loopback Request が NG となるので、ループバックに DNS 解決されるホスト名 lvh.me を
+    # 指定する
+    # 管理画面の WordPress アドレスと サイトアドレスにも lvh.me を指定している
+    # <https://zenn.dev/5t111111/scraps/397d27d7d6f1e1>
     extra_hosts:
-      - localhost:192.168.10.11
+      - lvh.me:host-gateway
     depends_on:
       - db
   db:

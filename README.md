@@ -68,9 +68,9 @@ sudo chmod g+w -R ../*
 ### URL
 
 - 管理ページ
-  - <https://localhost/wp-login.php>
+  - <https://lvh.me/wp-login.php>
 - 一般ページ
-  - <https://localhost>
+  - <https://lvh.me>
 
 ### ログイン情報
 
