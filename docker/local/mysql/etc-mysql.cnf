@@ -1,10 +1,10 @@
 [mysqld]
-# <https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html>
-# <https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html>
+# <https://dev.mysql.com/doc/refman/8.0/ja/server-system-variables.html>
+# <https://dev.mysql.com/doc/refman/8.0/ja/innodb-parameters.html>
 
-# character-set-server=latin1
+# character-set-server=utf8mb4
 character-set-server=utf8mb4
-# collation-server=latin1_swedish_ci
+# collation-server=utf8mb4_0900_ai_ci
 collation-server=utf8mb4_general_ci
 
 # log-timestamps=UTC
@@ -25,9 +25,9 @@ slow-query-log-file=/var/log/mysql/mysql-slow.log
 # long-query-time=10
 long-query-time=3
 
-# innodb-buffer-pool-size=134217728
-innodb-buffer-pool-size=536870912
+# innodb-buffer-pool-size=128M
+innodb-buffer-pool-size=512M
 
 [client]
-# default-character-set=utf8
+# default-character-set=utf8mb4
 default-character-set=utf8mb4
