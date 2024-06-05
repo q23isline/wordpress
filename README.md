@@ -93,6 +93,18 @@ docker exec -it --env XDEBUG_MODE=coverage app php composer.phar check
 docker exec -it app vendor/bin/phpcs --colors -p --standard=WordPress wp-content/themes/
 ```
 
+## DBのダンプ更新手順
+
+```bash
+docker exec -it db /bin/bash
+cd /docker-entrypoint-initdb.d
+mysqldump -u root -p wordpress > wordpress.sql
+# Enter password: は root を入力
+exit
+```
+
+git 差分が現れるため、コミット＆プッシュする
+
 ## デバッグ実行
 
 ### VS Codeの初期設定
