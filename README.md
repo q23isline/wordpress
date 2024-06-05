@@ -89,9 +89,22 @@ sudo chmod -R oug+rw logs
 ## コード静的解析
 
 ```bash
-docker exec -it --env XDEBUG_MODE=coverage app php composer.phar check
-# もしくは
+docker exec -it app php composer.phar check
+```
+
+### コーディング標準チェック単体実行
+
+```bash
+# コーディング標準チェック実行
 docker exec -it app vendor/bin/phpcs --colors -p --standard=WordPress wp-content/themes/
+# コーディング標準チェック自動整形実行
+docker exec -it app ./vendor/bin/phpcbf --colors -p --standard=WordPress wp-content/themes/
+```
+
+### 静的分析チェック単体実行
+
+```bash
+docker exec -it app ./vendor/bin/phpstan analyse
 ```
 
 ## DBのダンプ更新手順

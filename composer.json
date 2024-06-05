@@ -3,12 +3,21 @@
     "description": "WordPress skeleton app",
     "license": "MIT",
     "require-dev": {
-        "wp-coding-standards/wpcs": "^2.3"
+        "wp-coding-standards/wpcs": "^2.3",
+        "szepeviktor/phpstan-wordpress": "^1.3",
+        "phpstan/extension-installer": "^1.3"
     },
     "scripts": {
         "check": [
-            "@cs-check"
+            "@cs-check",
+            "@stan"
         ],
-        "cs-check": "phpcs --colors -p --standard=WordPress wp-content/themes/"
+        "cs-check": "phpcs --colors -p --standard=WordPress wp-content/themes/",
+        "stan": "phpstan analyse"
+    },
+    "config": {
+        "allow-plugins": {
+            "phpstan/extension-installer": true
+        }
     }
 }
