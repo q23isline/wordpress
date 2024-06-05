@@ -20,7 +20,7 @@ node_modules/
 # ignore log files and databases
 *.log
 *.sql
-!docker/local/mysql/test-data/*.sql
+!docker/local/mysql/init/*.sql
 *.sqlite
 
 # composer
