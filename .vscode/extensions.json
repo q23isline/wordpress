@@ -1,5 +1,6 @@
 {
     "recommendations": [
+        "EditorConfig.EditorConfig",
         "xdebug.php-debug",
         "bmewburn.vscode-intelephense-client",
         "persoderlind.vscode-phpcbf",
