@@ -25,3 +25,8 @@ node_modules/
 
 # composer
 /vendor/*
+
+.vscode/*
+!.vscode/extensions.json
+!.vscode/launch.json.default
+!.vscode/settings.json.default
