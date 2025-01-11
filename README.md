@@ -1,8 +1,10 @@
 # wordpress
 
+[![LICENSE](https://custom-icon-badges.herokuapp.com/badge/license-GPL%202.0-8BB80A.svg?logo=law&logoColor=white)](./license.txt)
 ![releases](https://img.shields.io/github/release/q23isline/wordpress.svg?logo=github)
 [![CircleCI](https://img.shields.io/circleci/build/github/q23isline/wordpress/develop.svg?label=CircleCI&logo=circleci)](https://circleci.com/gh/q23isline/wordpress)
 [![GitHub Actions](https://github.com/q23isline/wordpress/actions/workflows/ci.yml/badge.svg)](https://github.com/q23isline/wordpress/actions/workflows/ci.yml)
+[![PHPStan](https://img.shields.io/badge/PHPStan-level%20max-brightgreen.svg)](https://github.com/phpstan/phpstan)
 [![Open in Visual Studio Code](https://img.shields.io/static/v1?logo=visualstudiocode&label=&message=Open%20in%20Visual%20Studio%20Code&labelColor=555555&color=007acc&logoColor=007acc)](https://open.vscode.dev/q23isline/wordpress)
 
 [![PHP](https://img.shields.io/static/v1?logo=php&label=PHP&message=v8.3&labelColor=555555&color=777BB4&logoColor=777BB4)](https://www.php.net)
@@ -97,8 +99,11 @@ sudo chmod -R oug+rw logs
 
 ```bash
 docker exec -it --env XDEBUG_MODE=coverage app php composer.phar check
-# もしくは
+
+# フォーマッターのみ
 docker exec -it app vendor/bin/phpcs --colors -p --standard=WordPress wp-content/themes/
+# コード静的解析のみ
+docker exec -it app ./vendor/bin/phpstan analyse
 ```
 
 ## DBのダンプ更新手順
