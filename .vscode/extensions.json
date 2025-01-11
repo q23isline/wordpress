@@ -4,6 +4,7 @@
         "xdebug.php-debug",
         "bmewburn.vscode-intelephense-client",
         "persoderlind.vscode-phpcbf",
-        "shevaua.phpcs"
+        "shevaua.phpcs",
+        "SanderRonde.phpstan-vscode"
     ]
 }

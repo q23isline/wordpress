@@ -2,5 +2,6 @@
   "phpcbf.executablePath": "vendor/bin/phpcbf",
   "phpcbf.standard": "WordPress",
   "phpcs.executablePath": "vendor/bin/phpcs",
-  "phpcs.standard": "WordPress"
+  "phpcs.standard": "WordPress",
+  "phpstan.binPath": "vendor/bin/phpstan"
 }
