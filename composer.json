@@ -3,7 +3,8 @@
     "description": "WordPress skeleton app",
     "license": "MIT",
     "require-dev": {
-        "wp-coding-standards/wpcs": "^2.3"
+        "wp-coding-standards/wpcs": "^2.3",
+        "szepeviktor/phpstan-wordpress": "^2.0"
     },
     "scripts": {
         "check": [
