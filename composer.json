@@ -8,8 +8,10 @@
     },
     "scripts": {
         "check": [
-            "@cs-check"
+            "@cs-check",
+            "@stan"
         ],
-        "cs-check": "phpcs --colors -p --standard=WordPress wp-content/themes/"
+        "cs-check": "phpcs --colors -p --standard=WordPress wp-content/themes/",
+        "stan": "phpstan analyse"
     }
 }
