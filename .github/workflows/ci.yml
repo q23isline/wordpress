@@ -40,4 +40,7 @@ jobs:
     - name: Run coding standard
       run: composer cs-check
 
+    - name: Run coding analysis
+      run: composer stan
+
     #   run: composer run-script test

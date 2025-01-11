@@ -62,6 +62,7 @@ jobs:
             - ./vendor
       - run: vendor/bin/phpcs --config-set installed_paths vendor/wp-coding-standards/wpcs
       - run: composer cs-check
+      - run: composer stan
 
 workflows:
   version: 2
