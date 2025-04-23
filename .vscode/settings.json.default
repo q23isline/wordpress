@@ -1,7 +1,40 @@
 {
-  "phpcbf.executablePath": "vendor/bin/phpcbf",
-  "phpcbf.standard": "WordPress",
-  "phpcs.executablePath": "vendor/bin/phpcs",
-  "phpcs.standard": "WordPress",
-  "phpstan.binPath": "vendor/bin/phpstan"
+    "[php]": {
+        "editor.defaultFormatter": "mtbdata.vscode-phpsab-docker"
+    },
+    "editor.formatOnSave": true,
+    "phpstan.singleFileMode": true,
+    "phpstan.binPath": "vendor/bin/phpstan",
+    "phpstan.binCommand": [],
+    "phpstan.configFile": "phpstan.neon",
+    "phpstan.paths": {
+        "": "/var/www/html"
+    },
+    "phpstan.dockerContainerName": "app",
+    "phpstan.rootDir": "",
+    "phpstan.options": [],
+    "phpstan.enableStatusBar": true,
+    "phpstan.memoryLimit": "1G",
+    "phpstan.enabled": true,
+    "phpstan.projectTimeout": 300000,
+    "phpstan.timeout": 300000,
+    "phpstan.suppressTimeoutMessage": false,
+    "phpstan.showProgress": false,
+    "phpstan.showTypeOnHover": false,
+    "phpstan.enableLanguageServer": false,
+    "phpstan.ignoreErrors": [
+        "Xdebug: .*"
+    ],
+    "phpstan.suppressWorkspaceMessage": false,
+    "phpstan.pro": false,
+    "phpstan.tmpDir": "",
+    "phpstan.checkValidity": false,
+    "phpsab.docker.dockerEnabled": true,
+    "phpsab.docker.dockerContainer": "app",
+    "phpsab.docker.dockerWorkspaceRoot": "/var/www/html",
+    "phpsab.docker.dockerExecutablePathCBF": "/var/www/html/vendor/bin/phpcbf",
+    "phpsab.docker.dockerExecutablePathCS": "/var/www/html/vendor/bin/phpcs",
+    "phpsab.docker.autoRulesetSearch": false,
+    "phpsab.docker.standard": "WordPress",
+    "php-docblocker.useShortNames": true
 }
