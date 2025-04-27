@@ -1,0 +1,211 @@
+parameters:
+	ignoreErrors:
+		-
+			message: '#^Parameter \#2 \$instance of function the_widget expects array, string given\.$#'
+			identifier: argument.type
+			count: 1
+			path: wp-content/themes/my-classic-theme/404.php
+
+		-
+			message: '#^Parameter \#3 \$args of function the_widget expects array\{before_widget\?\: string, after_widget\?\: string, before_title\?\: string, after_title\?\: string\}, non\-falsy\-string given\.$#'
+			identifier: argument.type
+			count: 1
+			path: wp-content/themes/my-classic-theme/404.php
+
+		-
+			message: '#^Parameter \#2 \$name of function get_template_part expects string\|null, string\|false given\.$#'
+			identifier: argument.type
+			count: 1
+			path: wp-content/themes/my-classic-theme/archive.php
+
+		-
+			message: '#^Parameter \#1 \$number of function number_format_i18n expects float, int\|string given\.$#'
+			identifier: argument.type
+			count: 1
+			path: wp-content/themes/my-classic-theme/comments.php
+
+		-
+			message: '#^Parameter \#3 \$number of function _nx expects int, int\|string given\.$#'
+			identifier: argument.type
+			count: 1
+			path: wp-content/themes/my-classic-theme/comments.php
+
+		-
+			message: '#^Function my_classic_theme_content_width\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: wp-content/themes/my-classic-theme/functions.php
+
+		-
+			message: '#^Function my_classic_theme_scripts\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: wp-content/themes/my-classic-theme/functions.php
+
+		-
+			message: '#^Function my_classic_theme_setup\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: wp-content/themes/my-classic-theme/functions.php
+
+		-
+			message: '#^Function my_classic_theme_widgets_init\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: wp-content/themes/my-classic-theme/functions.php
+
+		-
+			message: '#^Function my_classic_theme_custom_header_setup\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: wp-content/themes/my-classic-theme/inc/custom-header.php
+
+		-
+			message: '#^Function my_classic_theme_header_style\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: wp-content/themes/my-classic-theme/inc/custom-header.php
+
+		-
+			message: '#^Cannot access property \$transport on WP_Customize_Setting\|null\.$#'
+			identifier: property.nonObject
+			count: 3
+			path: wp-content/themes/my-classic-theme/inc/customizer.php
+
+		-
+			message: '#^Function my_classic_theme_customize_preview_js\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: wp-content/themes/my-classic-theme/inc/customizer.php
+
+		-
+			message: '#^Function my_classic_theme_customize_register\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: wp-content/themes/my-classic-theme/inc/customizer.php
+
+		-
+			message: '#^Property WP_Customize_Manager\:\:\$selective_refresh \(WP_Customize_Selective_Refresh\) in isset\(\) is not nullable\.$#'
+			identifier: isset.property
+			count: 1
+			path: wp-content/themes/my-classic-theme/inc/customizer.php
+
+		-
+			message: '#^Function my_classic_theme_infinite_scroll_render\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: wp-content/themes/my-classic-theme/inc/jetpack.php
+
+		-
+			message: '#^Function my_classic_theme_jetpack_setup\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: wp-content/themes/my-classic-theme/inc/jetpack.php
+
+		-
+			message: '#^Parameter \#2 \$name of function get_template_part expects string\|null, string\|false given\.$#'
+			identifier: argument.type
+			count: 1
+			path: wp-content/themes/my-classic-theme/inc/jetpack.php
+
+		-
+			message: '#^Function my_classic_theme_body_classes\(\) has parameter \$classes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: wp-content/themes/my-classic-theme/inc/template-functions.php
+
+		-
+			message: '#^Function my_classic_theme_body_classes\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: wp-content/themes/my-classic-theme/inc/template-functions.php
+
+		-
+			message: '#^Function my_classic_theme_pingback_header\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: wp-content/themes/my-classic-theme/inc/template-functions.php
+
+		-
+			message: '#^Function my_classic_theme_entry_footer\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: wp-content/themes/my-classic-theme/inc/template-tags.php
+
+		-
+			message: '#^Function my_classic_theme_post_thumbnail\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: wp-content/themes/my-classic-theme/inc/template-tags.php
+
+		-
+			message: '#^Function my_classic_theme_posted_by\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: wp-content/themes/my-classic-theme/inc/template-tags.php
+
+		-
+			message: '#^Function my_classic_theme_posted_on\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: wp-content/themes/my-classic-theme/inc/template-tags.php
+
+		-
+			message: '#^Function wp_body_open\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: wp-content/themes/my-classic-theme/inc/template-tags.php
+
+		-
+			message: '#^Parameter \#1 \$author_id of function get_author_posts_url expects int, string given\.$#'
+			identifier: argument.type
+			count: 1
+			path: wp-content/themes/my-classic-theme/inc/template-tags.php
+
+		-
+			message: '#^Parameter \#1 \$text of function esc_attr expects string, int\|string\|false given\.$#'
+			identifier: argument.type
+			count: 2
+			path: wp-content/themes/my-classic-theme/inc/template-tags.php
+
+		-
+			message: '#^Parameter \#1 \$text of function esc_html expects string, int\|string\|false given\.$#'
+			identifier: argument.type
+			count: 2
+			path: wp-content/themes/my-classic-theme/inc/template-tags.php
+
+		-
+			message: '#^Parameter \#1 \$url of function esc_url expects string, string\|false given\.$#'
+			identifier: argument.type
+			count: 1
+			path: wp-content/themes/my-classic-theme/inc/template-tags.php
+
+		-
+			message: '#^Parameter \#2 \.\.\.\$values of function printf expects bool\|float\|int\|string\|null, string\|WP_Error given\.$#'
+			identifier: argument.type
+			count: 1
+			path: wp-content/themes/my-classic-theme/inc/template-tags.php
+
+		-
+			message: '#^Parameter \#2 \$name of function get_template_part expects string\|null, string\|false given\.$#'
+			identifier: argument.type
+			count: 1
+			path: wp-content/themes/my-classic-theme/index.php
+
+		-
+			message: '#^Parameter \#2 \$name of function get_template_part expects string\|null, string\|false given\.$#'
+			identifier: argument.type
+			count: 1
+			path: wp-content/themes/my-classic-theme/single.php
+
+		-
+			message: '#^Parameter \#1 \$url of function esc_url expects string, string\|false given\.$#'
+			identifier: argument.type
+			count: 1
+			path: wp-content/themes/my-classic-theme/template-parts/content-search.php
+
+		-
+			message: '#^Parameter \#1 \$url of function esc_url expects string, string\|false given\.$#'
+			identifier: argument.type
+			count: 1
+			path: wp-content/themes/my-classic-theme/template-parts/content.php
