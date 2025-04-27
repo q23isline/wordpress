@@ -104,6 +104,8 @@ docker exec -it --env XDEBUG_MODE=coverage app php composer.phar check
 docker exec -it app vendor/bin/phpcs --colors -p
 # コード静的解析のみ
 docker exec -it app ./vendor/bin/phpstan analyse
+# コード静的解析のベースラインを生成する（現状のエラーをいったんすべて無視する）
+docker exec -it app ./vendor/bin/phpstan analyse --generate-baseline
 ```
 
 ## DBのダンプ更新手順
@@ -118,9 +120,11 @@ exit
 
 git 差分が現れるため、コミット＆プッシュする
 
-## プラグインを新規作成したいとき
+## テーマ・プラグインを新規作成したいとき
 
 ```bash
+# テーマ
+docker exec -it app php wp-cli.phar scaffold _s my-classic-theme --allow-root
 # プラグイン
 docker exec -it app php wp-cli.phar scaffold plugin my-plugin --allow-root
 ```
