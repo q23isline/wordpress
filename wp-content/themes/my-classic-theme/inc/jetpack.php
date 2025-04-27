@@ -32,7 +32,7 @@ function my_classic_theme_jetpack_setup() {
 	add_theme_support(
 		'jetpack-content-options',
 		array(
-			'post-details' => array(
+			'post-details'    => array(
 				'stylesheet' => 'my-classic-theme-style',
 				'date'       => '.posted-on',
 				'categories' => '.cat-links',
