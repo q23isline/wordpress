@@ -12,9 +12,12 @@ parameters:
     paths:
         # 自作プラグインを設定する
         # - wp-content/plugins/xxx
+        - wp-content/plugins/my-plugin
         # 自作テーマを設定する
         # - wp-content/themes/xxx
         - wp-content/themes/index.php
+    excludePaths:
+        - wp-content/plugins/my-plugin/tests
     ignoreErrors:
         # Uses func_get_args()
         # - '#^Function apply_filters(_ref_array)? invoked with [34567] parameters, 2 required\.$#'
