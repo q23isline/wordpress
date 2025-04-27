@@ -28,7 +28,7 @@ class Options {
 	 * @var array Map of all the default options of the plugin.
 	 */
 	private static $map = [
-		'mail'                  => [
+		'mail'                     => [
 			'from_name',
 			'from_email',
 			'mailer',
@@ -36,7 +36,7 @@ class Options {
 			'from_name_force',
 			'from_email_force',
 		],
-		'smtp'                  => [
+		'smtp'                     => [
 			'host',
 			'port',
 			'encryption',
@@ -45,64 +45,68 @@ class Options {
 			'user',
 			'pass',
 		],
-		'gmail'                 => [
+		'gmail'                    => [
 			'one_click_setup_enabled',
 			'client_id',
 			'client_secret',
 		],
-		'outlook'               => [
+		'outlook'                  => [
+			'one_click_setup_enabled',
 			'client_id',
 			'client_secret',
 		],
-		'zoho'                  => [
+		'zoho'                     => [
 			'domain',
 			'client_id',
 			'client_secret',
 		],
-		'amazonses'             => [
+		'amazonses'                => [
 			'client_id',
 			'client_secret',
 			'region',
 		],
-		'mailgun'               => [
+		'mailgun'                  => [
 			'api_key',
 			'domain',
 			'region',
 		],
-		'mailjet'               => [
+		'mailjet'                  => [
 			'api_key',
 			'secret_key',
 		],
-		'sendgrid'              => [
+		'sendgrid'                 => [
 			'api_key',
 			'domain',
 		],
-		'sparkpost'             => [
+		'sparkpost'                => [
 			'api_key',
 			'region',
 		],
-		'postmark'              => [
+		'postmark'                 => [
 			'server_api_token',
 			'message_stream',
 		],
-		'smtpcom'               => [
+		'smtpcom'                  => [
 			'api_key',
 			'channel',
 		],
-		'sendinblue'            => [
+		'sendinblue'               => [
 			'api_key',
 			'domain',
 		],
-		'sendlayer'             => [
+		'sendlayer'                => [
 			'api_key',
 		],
-		'smtp2go'               => [
+		'elasticemail'             => [
 			'api_key',
 		],
-		'pepipostapi'           => [
+		'smtp2go'                  => [
 			'api_key',
 		],
-		'pepipost'              => [
+		'pepipostapi'              => [
+			'api_key',
+		],
+		'pepipost'                 => [
 			'host',
 			'port',
 			'encryption',
@@ -110,30 +114,34 @@ class Options {
 			'user',
 			'pass',
 		],
-		'license'               => [
+		'license'                  => [
 			'key',
 		],
-		'alert_email'           => [
+		'alert_email'              => [
 			'enabled',
 			'connections',
 		],
-		'alert_slack_webhook'   => [
+		'alert_slack_webhook'      => [
 			'enabled',
 			'connections',
 		],
-		'alert_discord_webhook' => [
+		'alert_discord_webhook'    => [
 			'enabled',
 			'connections',
 		],
-		'alert_twilio_sms'      => [
+		'alert_twilio_sms'         => [
 			'enabled',
 			'connections',
 		],
-		'alert_custom_webhook'  => [
+		'alert_custom_webhook'     => [
 			'enabled',
 			'connections',
 		],
-		'alert_events'          => [
+		'alert_push_notifications' => [
+			'enabled',
+			'connections',
+		],
+		'alert_events'             => [
 			'email_hard_bounced',
 		],
 	];
@@ -158,6 +166,7 @@ class Options {
 		'sendgrid',
 		'sparkpost',
 		'zoho',
+		'elasticemail',
 		'smtp2go',
 		'smtp',
 		'pepipost',
@@ -741,6 +750,15 @@ class Options {
 
 				break;
 
+			case 'elasticemail':
+				switch ( $key ) {
+					case 'api_key':
+						$return = $this->is_const_defined( $group, $key ) ? WPMS_ELASTICEMAIL_API_KEY : $value;
+						break;
+				}
+
+				break;
+
 			case 'smtp2go':
 				switch ( $key ) {
 					case 'api_key':
@@ -1120,6 +1138,15 @@ class Options {
 
 				break;
 
+			case 'elasticemail':
+				switch ( $key ) {
+					case 'api_key':
+						$return = defined( 'WPMS_ELASTICEMAIL_API_KEY' ) && WPMS_ELASTICEMAIL_API_KEY;
+						break;
+				}
+
+				break;
+
 			case 'smtp2go':
 				switch ( $key ) {
 					case 'api_key':
@@ -1414,7 +1441,7 @@ class Options {
 						}
 						break;
 
-					case 'api_key': // mailgun/sendgrid/sendinblue/pepipostapi/smtpcom/sparkpost/sendlayer/smtp2go/mailjet.
+					case 'api_key': // mailgun/sendgrid/sendinblue/pepipostapi/smtpcom/sparkpost/sendlayer/smtp2go/mailjet/elasticemail.
 					case 'secret_key': // mailjet.
 					case 'domain': // mailgun/zoho/sendgrid/sendinblue.
 					case 'client_id': // gmail/outlook/amazonses/zoho.
@@ -1534,6 +1561,7 @@ class Options {
 	 * @return bool
 	 */
 	public function is_mailer_smtp() {
+
 		return apply_filters( 'wp_mail_smtp_options_is_mailer_smtp', in_array( $this->get( 'mail', 'mailer' ), [ 'pepipost', 'smtp' ], true ) );
 	}
 
