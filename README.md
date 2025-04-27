@@ -101,7 +101,7 @@ sudo chmod -R oug+rw logs
 docker exec -it --env XDEBUG_MODE=coverage app php composer.phar check
 
 # フォーマッターのみ
-docker exec -it app vendor/bin/phpcs --colors -p --standard=WordPress wp-content/themes/
+docker exec -it app vendor/bin/phpcs --colors -p
 # コード静的解析のみ
 docker exec -it app ./vendor/bin/phpstan analyse
 ```
@@ -117,3 +117,10 @@ exit
 ```
 
 git 差分が現れるため、コミット＆プッシュする
+
+## プラグインを新規作成したいとき
+
+```bash
+# プラグイン
+docker exec -it app php wp-cli.phar scaffold plugin my-plugin --allow-root
+```
