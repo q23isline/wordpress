@@ -15,6 +15,7 @@ parameters:
         - wp-content/plugins/my-plugin
         # 自作テーマを設定する
         # - wp-content/themes/xxx
+        - wp-content/themes/my-theme
         - wp-content/themes/index.php
     excludePaths:
         - wp-content/plugins/my-plugin/tests
