@@ -1,7 +1,8 @@
 {
     "name": "wordpress/app",
     "description": "WordPress skeleton app",
-    "license": "MIT",
+    "license": "GPLv2",
+    "version": "1.0.0",
     "require-dev": {
         "wp-coding-standards/wpcs": "^2.3",
         "szepeviktor/phpstan-wordpress": "^2.0"
