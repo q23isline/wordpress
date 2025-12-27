@@ -38,6 +38,7 @@
 
     ```bash
     docker compose build
+    sudo chmod 644 docker/local/mysql/etc-mysql.cnf
     docker compose up -d
 
     docker exec -it app php composer.phar install
