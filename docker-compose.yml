@@ -7,7 +7,7 @@ volumes:
 
 services:
   web:
-    image: nginx:1.27-alpine
+    image: nginx:1.28-alpine
     container_name: web
     ports:
       - 80:80
@@ -39,12 +39,10 @@ services:
     depends_on:
       - db
   db:
-    image: mysql:8.3
+    image: mysql:9.0
     container_name: db
     ports:
       - 3306:3306
-    # パスワードで mysql にログインできるようにする
-    command: --authentication_policy=mysql_native_password
     environment:
       - MYSQL_DATABASE=wordpress
       - MYSQL_USER=default
