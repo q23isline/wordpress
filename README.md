@@ -9,8 +9,8 @@
 
 [![PHP](https://img.shields.io/static/v1?logo=php&label=PHP&message=v8.4&labelColor=555555&color=777BB4&logoColor=777BB4)](https://www.php.net)
 [![WordPress](https://img.shields.io/static/v1?logo=wordpress&label=WordPress&message=v6.9&labelColor=585C60&color=F4F4F4&logoColor=F4F4F4)](https://ja.wordpress.org/)
-[![MySQL](https://img.shields.io/static/v1?logo=mysql&label=MySQL&message=v8.3&labelColor=555555&color=4479A1&logoColor=4479A1)](https://dev.mysql.com)
-[![NGINX](https://img.shields.io/static/v1?logo=nginx&label=NGINX&message=v1.27&labelColor=555555&color=009639&logoColor=009639)](https://www.nginx.com)
+[![MySQL](https://img.shields.io/static/v1?logo=mysql&label=MySQL&message=v9.0&labelColor=555555&color=4479A1&logoColor=4479A1)](https://dev.mysql.com)
+[![NGINX](https://img.shields.io/static/v1?logo=nginx&label=NGINX&message=v1.28&labelColor=555555&color=009639&logoColor=009639)](https://www.nginx.com)
 
 ## はじめにやること
 
