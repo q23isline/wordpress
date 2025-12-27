@@ -7,9 +7,9 @@
 
 namespace PluginCheckCS\PluginCheck\Tests\CodeAnalysis;
 
+use PHP_CodeSniffer\Sniffs\Sniff;
 use PluginCheckCS\PluginCheck\Sniffs\CodeAnalysis\SettingSanitizationSniff;
 use PluginCheckCS\PluginCheck\Tests\AbstractSniffUnitTest;
-use PHP_CodeSniffer\Sniffs\Sniff;
 
 /**
  * Unit tests for SettingSanitizationSniff.
@@ -35,12 +35,7 @@ final class SettingSanitizationUnitTest extends AbstractSniffUnitTest {
 	 * @return array <int line number> => <int number of warnings>
 	 */
 	public function getWarningList() {
-		return array(
-			7  => 1,
-			9  => 1,
-			19 => 1,
-			21 => 1,
-		);
+		return array();
 	}
 
 	/**

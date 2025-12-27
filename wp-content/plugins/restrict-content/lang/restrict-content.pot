@@ -2,9 +2,9 @@
 # This file is distributed under the same license as the Restrict Content package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Restrict Content 3.2.14.1\n"
+"Project-Id-Version: Restrict Content 3.2.16\n"
 "Report-Msgid-Bugs-To: http://ithemes.com/support/\n"
-"POT-Creation-Date: 2025-04-28 21:57:22+00:00\n"
+"POT-Creation-Date: 2025-12-15 15:13:13+00:00\n"
 "PO-Revision-Date: 2025-MO-DA HO:MI+ZONE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1174,7 +1174,7 @@ msgstr ""
 #: core/includes/admin/customers/class-customers-table.php:58
 #: core/includes/admin/memberships/add-membership.php:46
 #: core/includes/admin/settings/settings.php:938
-#: core/includes/shortcodes.php:948 core/templates/register-common.php:59
+#: core/includes/shortcodes.php:957 core/templates/register-common.php:59
 #: legacy/includes/forms.php:505
 msgid "Email"
 msgstr ""
@@ -1303,7 +1303,7 @@ msgstr ""
 #: core/includes/registration-functions.php:285
 #: core/includes/registration-functions.php:290
 #: core/includes/registration-functions.php:295
-#: core/includes/shortcodes.php:705 core/includes/user-page-columns.php:136
+#: core/includes/shortcodes.php:714 core/includes/user-page-columns.php:136
 msgid "You do not have permission to perform this action."
 msgstr ""
 
@@ -6963,7 +6963,7 @@ msgstr ""
 msgid "Are you sure you want to disable auto renew?"
 msgstr ""
 
-#: core/includes/scripts.php:293 core/includes/shortcodes.php:1019
+#: core/includes/scripts.php:293 core/includes/shortcodes.php:1028
 msgid "Submit Payment"
 msgstr ""
 
@@ -6975,80 +6975,80 @@ msgstr ""
 msgid "Please enter your card details."
 msgstr ""
 
-#: core/includes/shortcodes.php:328
+#: core/includes/shortcodes.php:332
 msgid "Register New Membership"
 msgstr ""
 
-#: core/includes/shortcodes.php:337
+#: core/includes/shortcodes.php:341
 msgid "Renew Your Membership"
 msgstr ""
 
-#: core/includes/shortcodes.php:339
+#: core/includes/shortcodes.php:343
 msgid "Change Your Membership"
 msgstr ""
 
-#: core/includes/shortcodes.php:341
+#: core/includes/shortcodes.php:345
 msgid "Upgrade or Renew Your Membership"
 msgstr ""
 
-#: core/includes/shortcodes.php:343
+#: core/includes/shortcodes.php:347
 msgid "Join Now"
 msgstr ""
 
-#: core/includes/shortcodes.php:350
+#: core/includes/shortcodes.php:354
 msgid "You are already registered and have an active subscription."
 msgstr ""
 
-#: core/includes/shortcodes.php:351 legacy/includes/forms.php:476
+#: core/includes/shortcodes.php:355 legacy/includes/forms.php:476
 #: legacy/includes/shortcodes.php:99
 msgid "Register New Account"
 msgstr ""
 
-#: core/includes/shortcodes.php:447
+#: core/includes/shortcodes.php:456
 msgid "Join %s"
 msgstr ""
 
-#: core/includes/shortcodes.php:448
+#: core/includes/shortcodes.php:457
 msgid "Start Trial"
 msgstr ""
 
-#: core/includes/shortcodes.php:448
+#: core/includes/shortcodes.php:457
 msgid "Pay %s"
 msgstr ""
 
-#: core/includes/shortcodes.php:482
+#: core/includes/shortcodes.php:491
 msgid "You are already subscribed."
 msgstr ""
 
-#: core/includes/shortcodes.php:719
+#: core/includes/shortcodes.php:728
 msgid "Billing card updated successfully"
 msgstr ""
 
-#: core/includes/shortcodes.php:727
+#: core/includes/shortcodes.php:736
 msgid "Billing card could not be updated, please try again."
 msgstr ""
 
-#: core/includes/shortcodes.php:747
+#: core/includes/shortcodes.php:756
 msgid "Updating billing card details is not supported by your chosen payment method."
 msgstr ""
 
-#: core/includes/shortcodes.php:751
+#: core/includes/shortcodes.php:760
 msgid "Your billing details can be updated from inside your PayPal account."
 msgstr ""
 
-#: core/includes/shortcodes.php:888
+#: core/includes/shortcodes.php:897
 msgid "Please wait . . . "
 msgstr ""
 
-#: core/includes/shortcodes.php:934 restrictcontent.php:1052
+#: core/includes/shortcodes.php:943 restrictcontent.php:1052
 msgid "Close"
 msgstr ""
 
-#: core/includes/shortcodes.php:967 core/templates/register-common.php:237
+#: core/includes/shortcodes.php:976 core/templates/register-common.php:237
 msgid "I agree to the terms and conditions"
 msgstr ""
 
-#: core/includes/shortcodes.php:992 core/templates/register-common.php:262
+#: core/includes/shortcodes.php:1001 core/templates/register-common.php:262
 msgid "I agree to the privacy policy"
 msgstr ""
 
