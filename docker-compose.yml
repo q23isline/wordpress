@@ -36,6 +36,9 @@ services:
     # <https://zenn.dev/5t111111/scraps/397d27d7d6f1e1>
     extra_hosts:
       - lvh.me:host-gateway
+      # この指定がないと WLS2 の Ubuntu に直接 Docker インストールで動かしている場合に PHP がデバッグできない
+      # Docker Desktop をインストールしていればなくても動くがあっても問題ない
+      - "host.docker.internal:host-gateway"
     depends_on:
       - db
   db:
